@@ -1,31 +1,36 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-
-const getMenu = async () => {
-  const response = await axios.get("/the-polleria/home");
-
-  if (response.status === 200) {
-    return response.data;
-  } else {
-    throw new Error("Ocurrió un error al obtener el menú");
-  }
-};
+import "./styles/App.css";
 
 export const App = () => {
-  const [menu, setMenu] = useState([]);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
-    getMenu().then((menu) => setMenu(menu));
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          "http://localhost:3000/the-polleria/home"
+        );
+        setData(response.data);
+      } catch (error) {
+        console.error("Error al obtener datos:", error);
+      }
+    };
+
+    fetchData();
   }, []);
 
   return (
     <>
       <h1>Bienvenido</h1>
-      <ul>
-        {menu.map((menuItem) => (
-          <li key={menuItem.id}>{menuItem.name}</li>
+      <div className="caja">
+        {data.map((item) => (
+          <div className="one-caja" key={item.id}>
+            <h1>{item.nombre}</h1>
+            <p>{item.descripcion}</p>
+          </div>
         ))}
-      </ul>
+      </div>
     </>
   );
 };
