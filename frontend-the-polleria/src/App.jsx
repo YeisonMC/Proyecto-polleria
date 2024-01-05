@@ -22,7 +22,12 @@ export const App = () => {
 
   return (
     <>
-      <h1>Bienvenido</h1>
+      <h1 className="text-fuchsia-900 border-4 border-indigo-500/100">
+        Bienvenidossss
+      </h1>
+      <h1 className="text-fuchsia-900 border-4 border-indigo-500/100">
+        Bienvenidossss
+      </h1>
       <div className="caja">
         {data.map((item) => (
           <div className="one-caja" key={item.id}>
