@@ -1,5 +1,5 @@
-import React from 'react'
-import { AiOutlineShoppingCart, AiOutlineSearch } from 'react-icons/ai';
+import React from "react";
+import { AiOutlineShoppingCart, AiOutlineSearch } from "react-icons/ai";
 import { FaChevronCircleLeft } from "react-icons/fa";
 import { FaChevronCircleRight } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
@@ -8,7 +8,7 @@ import { FaBars } from "react-icons/fa";
 function footer() {
   return (
     <footer>
-    <div className='footer-container'>
+      {/* <div className='footer-container'>
     <div className='footer-item'>
       <img src="https://d.newsweek.com/en/full/1215180/fortnite-chicken.png?w=1600&h=900&q=88&f=768a262c006567b1e64e818be2d16e6a" alt="" />
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quo !</p>
@@ -39,10 +39,10 @@ function footer() {
       <a href=""><FaFacebook size={60}/></a>
       <a href=""><FaWhatsapp size={60}/></a>
     </div>
-    </div>
-    <p className='derechos'>Todos los derechos reservados 2023</p>
-  </footer>
-  )
+    </div> */}
+      <p className="derechos">Todos los derechos reservados 2023</p>
+    </footer>
+  );
 }
 
-export default footer
+export default footer;
